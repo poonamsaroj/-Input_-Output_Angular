@@ -1,0 +1,20 @@
+
+<div class="container mt-4">
+    <div id="accordion">
+      <div class="card">
+        <div class="card-header">
+          <a class="card-link" data-toggle="collapse" href="#">
+           {{ element.type }}
+          </a>
+        </div>
+        <div id="collapseOne" class="collapse show" data-parent="#accordion" >
+          <div class="card-body" *ngIf="element.type === 'server'" style="color:red">
+            {{element.content}}
+          </div>
+          <div class="card-body" *ngIf="element.type === 'blueprint'" style="color:blue">
+            {{element.content}}
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
